@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Instagram",
+    "privacy": {
+      "Maketheaccountprivate" : "Go to your profile\nTap on the menu icon in the upper right corner and open the options\nTap on the “settings” and choose “privacy”\nMove the switch button next to “private account” to the right",
+      "Hideactivitystatus" : "Go to your profile\nTap on the Menu icon in the upper right corner and open the options.\nTap on the “settings” and choose “privacy”\nTap on activity status and toggle the switch to the lef",
+      "ContactSynchronisation" : "Go to your profile\nTap on the Menu icon in the upper right corner and open the options.\nTap on the settings and choose “account”\nToggle the switch to the left so that instagram has no access to your contacts",
+      "Suggestions": "Open instagram in your internet browser and go to you profile\nChoose “edit profile” and uncheck “Include your account when recommending similar accounts people might want to follow.”\nSubmit your changes"
+    },
+    "security": {
+      "Changethepassword" :"Go to your profile\nTap on the menu icon in the upper right corner and open the options\nTap on the “settings”\nChoose “security” and “password”\nEnter the current password and then enter the new one",
+      "TwoFactorAuthentication" :" 🔑 Go to your profile\nTap on the menu icon and go to the settings\nTap on “security” and chose the “two-factor authentication”\nYou have two opportunities, either you will get the code via SMS on your smartphone or you will use the authentication app! Choose one of the methods and move the corresponding switch button to the right. \nFollow the instructions",
+      "ClearSearchHistory" :"Go to the profile\nTap on the menu icon and go to settings\nTap on “security” and then on “search history”\nSelect “clear all” or remove the specific search ",
+      "Savelogindetails" :"Go to the profile\nTap on the menu icon and go to settings\nTap on security and “saved login info”\nMove the switch to the left"
+    },
+    "interaction": {
+      "Managetagging": "Go to the profile\nTap on the menu icon and go to settings\nTip on “privacy” and go to “tags”\nAdjust who can tag you or choose to “manually approve tags”",
+      "Deletethepost": "Go to your profile\nOpen the post that you want to delete\nTap on the three dots and then choose to delete.\nYou can also archive the post, which will keep it for you, but others won’t be able to see it.",
+      "Deletethestory": "Go to “your story”\nTap on more and select “delete”",
+      "Hidethestory": "Go to your profile\nTap on the menu icon in the upper right corner and go to “settings”\nTap on “privacy” and then “story”\nSelect “hide story from” and choose the accounts",
+      "Sharethestorywithselectedgroup": "Go to your profile\nTap on the menu icon in the upper right corner and go to “settings”\nTap on “privacy” and then “story”\nTap on “0 people” under “close friends” and select accounts that can see your story and save the selection.\nIn order to share the story with these accounts only, select “close friends” on the bottom of the screen when you are adding a story.",
+      "Sharingyourstory": "Go to your profile\nTap on the menu icon in the upper right corner and go to “settings”\nTap on “privacy” and then “story”\nScroll down to “sharing” and slide the switches for “allow resharing to stories” and “allow sharing” to the left.",
+      "Turnoffcommenting": "Go to your profile\nGo to the post that should not be commented on and tap on the three dots in the upper right corner\nChoose “turn off commenting”\nTo allow commenting again, repeat the above steps and click on “turn on commenting”"
+    },
+    "blocking": {
+      "Blocktheaccount": "Go to the account you would like to block and tap on the tree dots to open the menu. \nChoose “block” and confirm you choice. \nYou can remove the block with the same steps by selecting “unblock”.",
+      "Reporttheaccount": "Go to the profile and tap on the three dots in the upper right corner.\nSelect “report” and how you want to  report the profile , as a “spam” or “inappropriate”. \nFollow the instructions.",
+      "Reportthestory": "Go to the story and tap on the three dots.\nChoose “report”",
+      "Reportthepost": "Go to the post that you want to report and tap on the three dots on the upper right side. \nTap on report.\nSelect why you want to report the post. \nIf you choose the spam, it will be registered as such without the further confirmation\nIf you choose “it’s inappropriate”, follow the further instructions.",
+      "Reportthecomment": "Go to the comment and tap on it for about a second. \nTap on the exclamation mark and choose the reason for reporting."
+    },
+    "delete": {
+      "Temporarilydeactivateaccount": "Go to the www.instagram.com in your browser and log in with your account. \nGo to “edit profile”and click on “temporarily disable my account”. \nChoose the reason of deactivating the account, enter your password and confirm your choice.",
+      "Deletetheaccount":"Go to the www.instagram.com  in your browser and log in with your account. \nOpen this link in the new tab  in your browser https://www.instagram.com/accounts/remove/request/permanent/. \nChoose the reason of deletion, enter your password and confirm your choice to permanently delete your account."
+    }
+  }
+]
