@@ -1,14 +1,14 @@
 [
     {
-        "'1'": "Keep personal information secret.\n \n ",
-        "'2'": "The internet does not forget! \n \n",
-        "'3'": "Not everything on the internet is true! \n \n",
-        "'4'": "There's nothing for free \n \n",
-        "'5'": "Observe copyrights. \n \n",
-        "'6'": "Protect your computer & cell phone. \n \n",
-        "'7'": "Take action against cyber bullying. \n \n",
-        "'8'": "Use apps safely. \n \n",
-        "'9'": "Be careful when 'sexting!' \n \n ",
-        "'10'": "Delete chain letters.\n \n "
+        "'1'": "Keep personal information secret.\n \nYour home address, cell phone number, email address etc. are not for the internet.\nNever! tell your password to anyone.❌",
+        "'2'": "The internet does not forget! \n \nDon't post photos, videos, or text that you or others may find uncomfortable. \nOnce content has been circulated on the internet, it is almost impossible to remove! \nPublishing or sending photos or videos that make other people look ridiculous is not allowed by law.🚨",
+        "'3'": "Not everything on the internet is true! \n \n Be suspicious of claims that you find on the net! Especially shocking or sensational news is often not true at all.\nSometimes rumors and false stories are purposely spread to deceive others.",
+        "'4'": "There's nothing for free \n \nAnything stated free on the internet is always suspicious,\n Especially if they required your personal information.\nBecareful it can be a malware.",
+        "'5'": "Observe copyrights. \n \n Always ask other peoples permission if you are publishing their content on the internet.\n \nCopyright infringements can be expensive!❌",
+        "'6'": "Protect your computer & cell phone. \n \nUse an anti-virus program on your computer, smartphone or tablet and update it regularly.👍\nAlso keep your software and apps up to date, ideally via automatic update.\nProtect your device from unauthorized access with a PIN code, password or unlock pattern!🔒",
+        "'7'": "Take action against cyber bullying. \n \n Cyber-bullying is never fun, but a criminal act. Defend yourself against cyber bullying and support victims of bullying: Secure evidence(screenshots😏), block and report and get help from people you trust- the sooner the better.",
+        "'8'": "Use apps safely. \n \nOnly download apps from the official app shops - third-party apps are often infected with malware.❌\nCheck the access permissions during installation and prefer not to use apps that require too many permissions.\n\nA flashlight app does not need access to the current location.",
+        "'9'": "Be careful when 'sexting!' \n \nSexting can be fun, but it can also have unpleasant consequences!\nWith just a few clicks, your nude pictures can be forwarded to a large number of people.😨\nWith such photos, make sure that your face cannot be recognized and before sending them.😐",
+        "'10'": "Delete chain letters.\n \nScary messages or chain letters with death threats can be very scary.\nThey usually are completely fictitious!💩 \nTherefore do not send them on, but delete them.\nAlso, don't click on any links❌\n- these could contain malware or become a rip-off trap.😨"
     }
 ]
