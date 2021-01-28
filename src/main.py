@@ -26,7 +26,7 @@ TIKTOK = "TikTok"
 SNAPCHAT = "Snapchat"
 YOUTUBE = "YouTube"
 MAIN_KEYBOARD = "Back to main menu"
-smKeyboard = [[INSTA], [TIKTOK], [SNAPCHAT], [SNAPCHAT], [MAIN_KEYBOARD]]
+smKeyboard = [[INSTA], [TIKTOK], [SNAPCHAT], [MAIN_KEYBOARD]]
 
 # CATEGORY_LEVEL
 PRIVACY = "Privacy"
@@ -60,7 +60,7 @@ def getJson(k):
 def start(update, context):
     logger.info('Media Privacy Bot session started.')
     greeting = 'Hey, I\'m Media Privacy Bot! I\'m here to help you learn skills for safety navigating social media.\n\n'
-    reply_markup = ReplyKeyboardMarkup(mainKeyboard, resize_keyboard =True, one_time_keyboard=True)
+    reply_markup = ReplyKeyboardMarkup(mainKeyboard, resize_keyboard=True, one_time_keyboard=True)
     update.message.reply_text(greeting + 'What would you like to know?', reply_markup=reply_markup)
     return MAIN_LEVEL
     
@@ -78,13 +78,13 @@ def main_level(update, context):
    
     elif selected == PRIVACY_SETTINGS:
         message = 'The best place to start to ensure social media safety is to check the *privacy settings* of any social media network you are using.\n\n'
-        reply_markup = ReplyKeyboardMarkup(smKeyboard, one_time_keyboard=True)
+        reply_markup = ReplyKeyboardMarkup(smKeyboard, resize_keyboard=True, one_time_keyboard=True)
         update.message.reply_text(message + 'Please select the social media of your choice.', parse_mode='markdown', reply_markup=reply_markup)
         return SM_LEVEL
    
     elif selected == ONLINE_QUIZ:
         message = 'Coming soon 😊\n\n'
-        reply_markup = ReplyKeyboardMarkup(mainKeyboard, resize_keyboard =True, one_time_keyboard=True)
+        reply_markup = ReplyKeyboardMarkup(mainKeyboard, resize_keyboard=True, one_time_keyboard=True)
         update.message.reply_text(message + 'Choose an option with the buttons below.', reply_markup=reply_markup)
         return MAIN_LEVEL
 
@@ -98,7 +98,7 @@ def sm_level(update, context):
         title = '*Instagram*\n\n'
         message = 'Instagram is a picture and video sharing app. Users can post content on their profile grid or to their stories, which last 24 hours. You can follow your friends, family, celebrities and companies on Instagram. Instagram also has a live streaming feature.\n\n _Official age rating_: 13+'
         update.message.reply_text(title + message, parse_mode='markdown')
-        reply_markup = ReplyKeyboardMarkup(categoryKeyboard, resize_keyboard =True, one_time_keyboard=True)
+        reply_markup = ReplyKeyboardMarkup(categoryKeyboard, resize_keyboard=True, one_time_keyboard=True)
         update.message.reply_text('You can find the following information about Instagram:', parse_mode='markdown', reply_markup=reply_markup)
         return CATEGORY_LEVEL
     
@@ -107,7 +107,7 @@ def sm_level(update, context):
         message = 'TikTok is a social media platform that lets you create, share and discover 60 second videos. You can use music and effects to enhance your videos and you can also browse other people’s videos and interact with them.\n\n _Official age rating_: 13+'
         update.message.reply_text(title + message, parse_mode='markdown')
         # content for TikTok is not implemented. return back to social media.
-        reply_markup = ReplyKeyboardMarkup(smKeyboard, one_time_keyboard=True)
+        reply_markup = ReplyKeyboardMarkup(smKeyboard, resize_keyboard=True, one_time_keyboard=True)
         update.message.reply_text('TikTok is coming soon. Now you can find the information about *Instagram*.', parse_mode='markdown', reply_markup=reply_markup)
         return SM_LEVEL
 
@@ -116,7 +116,7 @@ def sm_level(update, context):
         message = 'The Snapchat app lets you send photos, short videos or messages to your friends. Pictures and videos, known as \'Snaps\', usually appear temporarily before disappearing, though they can be captured via screenshots.\n\n _Official age rating_: 13+'
         update.message.reply_text(title + message, parse_mode='markdown')
         # content for Snapchat is not implemented. return back to social media.
-        reply_markup = ReplyKeyboardMarkup(smKeyboard, one_time_keyboard=True)
+        reply_markup = ReplyKeyboardMarkup(smKeyboard, resize_keyboard=True, one_time_keyboard=True)
         update.message.reply_text('Snapchat is coming soon. Now you can find the information about *Instagram*.', parse_mode='markdown', reply_markup=reply_markup)
         return SM_LEVEL
     
@@ -125,12 +125,12 @@ def sm_level(update, context):
         message = 'YouTube lets you watch, create and comment on videos. You can create your own YouTube account, create a music playlist, and even create your own channel, which means you’ll have a public profile. YouTube allows live streaming.\n\n _Official age rating_: 13+'
         update.message.reply_text(title + message, parse_mode='markdown')
         # content for YouTube is not implemented. return back to social media.
-        reply_markup = ReplyKeyboardMarkup(smKeyboard, one_time_keyboard=True) 
+        reply_markup = ReplyKeyboardMarkup(smKeyboard, resize_keyboard=True, one_time_keyboard=True) 
         update.message.reply_text('YouTube is coming soon. Now you can find the information about *Instagram*.', parse_mode='markdown', reply_markup=reply_markup)
         return SM_LEVEL
 
     elif selected == MAIN_KEYBOARD:
-        reply_markup = ReplyKeyboardMarkup(mainKeyboard, resize_keyboard=True, one_time_keyboard=True) 
+        reply_markup = ReplyKeyboardMarkup(mainKeyboard, resize_keyboard=True, one_time_keyboard=True)
         update.message.reply_text('Choose an option with the buttons below.', reply_markup=reply_markup)
         return MAIN_LEVEL
     
@@ -150,49 +150,61 @@ def category_level(update, context):
         for i in instaPrivacy:
             keyboard.append([i])
         keyboard.append([CATEGORY_KEYBOARD])
-        reply_markup = ReplyKeyboardMarkup(keyboard, one_time_keyboard=True)
-        update.message.reply_text('Privacy aspects', reply_markup=reply_markup)
+        title = '*Privacy aspects*\n\n'
+        message = 'Instagram accounts can be set to private so only people who follow you can see your posts. You have to approve all follow requests.\n\nInstagram also has a function that lets you restrict who can comment on your posts or turn off comments completely.\n\nThe app’s default setting for location sharing is off but you should always double check this in settings.'
+        reply_markup = ReplyKeyboardMarkup(keyboard, resize_keyboard=True, one_time_keyboard=True)
+        update.message.reply_text(title + message, parse_mode='markdown', reply_markup=reply_markup)
 
     elif selected == SECURITY:
         keyboard = []
-        for i in instaPrivacy:
+        for i in instaSecurity:
             keyboard.append([i])
         keyboard.append([CATEGORY_KEYBOARD])
-        reply_markup = ReplyKeyboardMarkup(keyboard, one_time_keyboard=True)
-        update.message.reply_text('Important security aspects', reply_markup=reply_markup)
+        title = '*Security aspects*\n\n'
+        message = 'Instagram has a selection of tips and recommendations, including information on safety and two-factor authentication.'
+        reply_markup = ReplyKeyboardMarkup(keyboard, resize_keyboard=True, one_time_keyboard=True)
+        update.message.reply_text(title + message, parse_mode='markdown', reply_markup=reply_markup)
 
     elif selected == INTERACTION:
         keyboard = []
-        for i in instaPrivacy:
+        for i in instaInteraction:
             keyboard.append([i])
         keyboard.append([CATEGORY_KEYBOARD])
-        reply_markup = ReplyKeyboardMarkup(keyboard, one_time_keyboard=True)
-        update.message.reply_text('Some of the useful aspects about managing your content', reply_markup=reply_markup)
+        title = '*Content*\n\n'
+        message = 'Instagram has built in features that automatically remove offensive words and comments. There is also an option to add your own list of words that you don’t want to appear.\n\nMany children use Instagram to follow their favourite influencers, celebrities or other accounts they find interesting. This means it’s hard to control the sorts of content you’re seeing which means you might still come across something you find upsetting or that you don’t want to see.'
+        reply_markup = ReplyKeyboardMarkup(keyboard, resize_keyboard=True, one_time_keyboard=True)
+        update.message.reply_text(title + message, parse_mode='markdown', reply_markup=reply_markup)
 
     elif selected == BLOCKING:
         keyboard = []
-        for i in instaPrivacy:
+        for i in instaReporting:
             keyboard.append([i])
         keyboard.append([CATEGORY_KEYBOARD])
-        reply_markup = ReplyKeyboardMarkup(keyboard, one_time_keyboard=True)
-        update.message.reply_text('Reporting and blocking', reply_markup=reply_markup)
+        title = '*Reporting & blocking*\n\n'
+        message = 'To block another account or report images, videos or comments that are upsetting, you just need to click on the three dots in the top right hand corner.' 
+        reply_markup = ReplyKeyboardMarkup(keyboard, resize_keyboard=True, one_time_keyboard=True)
+        update.message.reply_text(title + message, parse_mode='markdown', reply_markup=reply_markup)
 
     elif selected == DELETE:
         keyboard = []
-        for i in instaPrivacy:
+        for i in instaDelete:
             keyboard.append([i])
         keyboard.append([CATEGORY_KEYBOARD])
-        reply_markup = ReplyKeyboardMarkup(keyboard, one_time_keyboard=True)
-        update.message.reply_text('Deleting or deactivating your account', reply_markup=reply_markup)
+        title = '*Deleting & deactivating*\n\n'
+        message = 'Deleting or deactivating your account.'
+        reply_markup = ReplyKeyboardMarkup(keyboard, resize_keyboard=True, one_time_keyboard=True)
+        update.message.reply_text(title + message, parse_mode='markdown', reply_markup=reply_markup)
 
     elif selected == SM_KEYBOARD:
-        reply_markup = ReplyKeyboardMarkup(smKeyboard, one_time_keyboard=True)
+        reply_markup = ReplyKeyboardMarkup(smKeyboard, resize_keyboard=True, one_time_keyboard=True)
         update.message.reply_text('Choose an option with the buttons below.', reply_markup=reply_markup)
+        return SM_LEVEL
 
     # back to categories
     elif selected == CATEGORY_KEYBOARD:
-        reply_markup = ReplyKeyboardMarkup(categoryKeyboard, one_time_keyboard=True)
+        reply_markup = ReplyKeyboardMarkup(categoryKeyboard, resize_keyboard=True, one_time_keyboard=True)
         update.message.reply_text('Choose an option with the buttons below.', reply_markup=reply_markup)
+        return CATEGORY_LEVEL
 
     else:
         update.message.reply_text(getJson(selected))
