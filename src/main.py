@@ -35,7 +35,7 @@ INTERACTION = "Interaction"
 BLOCKING = "Reporting and Blocking"
 DELETE = "Delete"
 SM_KEYBOARD = "Back to social media"
-categoryKeyboard = [[PRIVACY], [SECURITY], [INTERACTION], [BLOCKING], [DELETE], [SM_KEYBOARD]]
+categoryKeyboard = [[PRIVACY, SECURITY], [BLOCKING], [INTERACTION, DELETE], [SM_KEYBOARD]]
 
 # JSON 
 instaPrivacy = ['Make the account private','Hide activity status','Contact Synchronisation', 'Suggestions']
