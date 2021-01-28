@@ -29,10 +29,6 @@ YOUTUBE = "YouTube"
 MAIN_KEYBOARD = "Back to main menu"
 smKeyboard = [[INSTA], [TIKTOK], [SNAPCHAT], [MAIN_KEYBOARD]]
 
-#For safety tip
-TIP = "Tip"
-safetyKeyboard = [[TIP], [MAIN_KEYBOARD]]
-
 # CATEGORY_LEVEL
 PRIVACY = "Privacy"
 SECURITY = "Security"
@@ -90,10 +86,8 @@ def main_level(update, context):
 	logger.info("User %s selected option %s", user.first_name, selected)
 	
 	if selected == SAFETY_TIPS:
-		message = 'Coming soon 😊\n\n'
-		reply_markup = ReplyKeyboardMarkup(safetyKeyboard, resize_keyboard =True, one_time_keyboard=True)
-		update.message.reply_text(message + 'Choose an option with the buttons below.', reply_markup=reply_markup)
-		return SM_LEVEL
+		update.message.reply_text(getTip())
+		return MAIN_LEVEL
    
 	elif selected == PRIVACY_SETTINGS:
 		message = 'The best place to start to ensure social media safety is to check the *privacy settings* of any social media network you are using.\n\n'
@@ -153,11 +147,6 @@ def sm_level(update, context):
 		reply_markup = ReplyKeyboardMarkup(mainKeyboard, resize_keyboard=True, one_time_keyboard=True)
 		update.message.reply_text('Choose an option with the buttons below.', reply_markup=reply_markup)
 		return MAIN_LEVEL
-	
-	#Safety tip
-	elif selected == TIP:
-		update.message.reply_text(getTip())
-		return SM_LEVEL
 	
 	else:
 		reply_markup = ReplyKeyboardMarkup(mainKeyboard, resize_keyboard=True, one_time_keyboard=True) 
