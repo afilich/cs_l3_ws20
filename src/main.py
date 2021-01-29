@@ -92,7 +92,7 @@ def main_level(update, context):
     logger.info("User %s selected option %s", user.first_name, selected)
 
     if selected == SAFETY_TIPS:
-        update.message.reply_text(getTip())
+        update.message.reply_text(getTip(), parse_mode='markdown')
         return MAIN_LEVEL
 
     elif selected == PRIVACY_SETTINGS:
